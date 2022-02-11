@@ -34,7 +34,6 @@ var seattle = {
 
    }
  },
-
  calcCookiesEachHour: function () {
 
    this.calcCustomersEachHour();
