@@ -47,5 +47,4 @@ var seattle = {
 
      this.totalDailyCookies += oneHour;
 
-
    }
