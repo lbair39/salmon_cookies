@@ -14,9 +14,6 @@
 // your array should contain the hours of 6am through 7pm
 
 
-var hours;
-
-
 
 
 
@@ -33,25 +30,7 @@ var hours;
 
 
 
-var seattle = {
 
-
- locationName: 'Seattle',
-
-
- minCustomersPerHour: 23,
-
-
- maxCustomersPerHour: 65,
-
-
- avgCookiesPerSale: 6.3,
-
-
- customersEachHour: [],
-
-
- cookiesEachHour: [],
 
 
 // TODO: assign an array to the hours variable below
@@ -327,7 +306,79 @@ var dubai = { };
 
 
 
-var paris = { };
+var paris = { 
+    locationName: 'Paris', 
+    minCustomersPerHour: 23, 
+    maxCustomersPerHour: 65,
+    avgCookiesPerSale: 6.3,
+    customersEachHour: [],
+    cookiesEachHour: [],
+    totalDailyCookies: 0,
+    
+    calcCustomersEachHour: function () {
+        for ( var i=0;< hours.length; i++) {
+
+
+            this.customersEachHour.push(random(this.minCustomersPerHour, this.maxCustomersPerHour)); })} 
+},
+
+calcCookiesEachHour: function (){
+
+    this.calcCustomersEachHour();
+    
+    for (var i = 0; i < hours.length; i++)
+
+    var oneHour = Math.ceil(this.customersEachHour[i] * this.avgCookiesPerSale);
+
+
+     this.cookiesEachHour.push(oneHour);
+
+
+     this.totalDailyCookies += oneHour;
+
+
+   }
+},
+ render() {
+
+
+    this.calcCookiesEachHour();
+ 
+    var unorderedList;
+
+
+
+
+
+
+
+    for (var i = 0; i < hours.length; i++) {
+ 
+ 
+      var listItem = document.createElement('li');
+ 
+ 
+      listItem.textContent = hours[i] + ': ' + this.cookiesEachHour[i] + ' cookies';
+ 
+ 
+      unorderedList.appendChild(listItem);
+  }
+    listItem = document.createElement('li');
+
+
+   listItem.textContent = 'Total: ' + this.totalDailyCookies + ' cookies';
+
+
+   unorderedList.appendChild(listItem);
+
+
+ }
+
+
+};
+ 
+
+
 
 
 
@@ -383,13 +434,10 @@ var allShops = [];
  }
 
 
-})();
 
 
 
-
-=======
-   }
+   
   
  },
  calcCookiesEachHour: function () {
@@ -406,4 +454,4 @@ var allShops = [];
    }
   }
 }
->>>>>>> 399fcbdc088f6cb4ee2cb427d603f28086d888e5
+
