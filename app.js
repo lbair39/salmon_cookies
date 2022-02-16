@@ -12,26 +12,9 @@
 
 
 // your array should contain the hours of 6am through 7pm
-
-
-
-
-
-
-
 // REVIEW: look at the JS object for a store below (seattle)
 
-
 // You will be copying this object design, and it's capabilities
-
-
-
-
-
-
-
-
-
 
 // TODO: assign an array to the hours variable below
 // your array should contain the hours of 6am through 7pm
@@ -141,19 +124,20 @@ var paris = {
     customersEachHour: [],
     cookiesEachHour: [],
     totalDailyCookies: 0,
-    
     calcCustomersEachHour: function () {
-        for ( var i=0;< hours.length; i++) {
-   this.customersEachHour.push(random(this.minCustomersPerHour, this.maxCustomersPerHour)); })} 
+        
+   for ( var i = 0; i < hours.length; i++) {
+   this.customersEachHour.push(random(this.minCustomersPerHour, this.maxCustomersPerHour)); 
+}
 },
 
 calcCookiesEachHour: function () {
 
     this.calcCustomersEachHour();
     
-    for (var i = 0; i < hours.length; i++)
+    for (var i = 0; i < hours.length; i++) {
 
-    var oneHour = Math.ceil(this.customersEachHour[i] (this.avgCookiesPerSale);
+    var oneHour = Math.ceil(this.customersEachHour[i] *  this.avgCookiesPerSale);
 
 
      this.cookiesEachHour.push(oneHour);
@@ -164,45 +148,21 @@ calcCookiesEachHour: function () {
 
    }
 },
+
  render() {
-
-
     this.calcCookiesEachHour();
- 
-    var unorderedList;
+    var unorderedList=document.getElementById("paris");
 for (var i = 0; i < hours.length; i++) {
- 
- 
       var listItem = document.createElement('li');
- 
- 
       listItem.textContent = hours[i] + ': ' + this.cookiesEachHour[i] + ' cookies';
- 
- 
-      unorderedList.appendChild(listItem);
+    unorderedList.appendChild(listItem);
   }
     listItem = document.createElement('li');
-
-
    listItem.textContent = 'Total: ' + this.totalDailyCookies + ' cookies';
-
-
    unorderedList.appendChild(listItem);
-
-
- }
-
-
-};
+}
+ };
  
-
-
-
-
-
-
-
-
 
 var lima = { 
     locationName: 'Lima',
@@ -214,28 +174,27 @@ var lima = {
     totalDailyCookies: 0, 
 
     calcCustomersEachHour: function () {
-        for (var i=0; < hours.length; i++) { 
-            this.customersEachHour.push(random( this.minCustomersPerHour, this.maxCustomersPerHour))
+        for (var i=0; i< hours.length; i++) { 
+            this.customersEachHour.push(random( this.minCustomersPerHour, this.maxCustomersPerHour));
         }
-    }
+    },
     calcCookiessEachHour: function () {
         this.calcCustomersEachHour();
-        for (var 1=0; i< hours.length; i++)
-        var oneHour= Math.ceil(this.customersEachHour[i](this.avgCookiesPerSale.):
+        for (var i=0; i< hours.length; i++) {
+        var oneHour= Math.ceil(this.customersEachHour[i] * this.avgCookiesPerSale);
         this.cookiesEachHour. push(OneHour);
         this.totalDailyCookies += oneHour;
-    }
+        }
+    
+    },
     render (){
         this.calcCookiessEachHour();
-        var unorderedList; 
-        for var(i =0; i < hours.length; i++){
-            var listItem = document.createElement('li')
-            listItem.textContent = hours[i] + ':' +this.cookiesEachHour[i]+'cookies';
+        var unorderedList=document.getElementById("lima");
+        for (var i =0; i < hours.length; i++) {
+            var listItem = document.createElement('li');
+            listItem.textContent = hours[i] + ':' + this.cookiesEachHour[i] + 'cookies';
             unorderedList.appendchild(listItem);
         }
-        this.totalDailyCookies();
-        var unorderedList;
-        for var( i=0; i < hours.length; i++)
         listItem = document.createElement ('li');
         listItem.textContent= 'Total'+ this.totalDailyCookies + 'cookies';
         unorderedList.appendChild(listItem);
@@ -243,70 +202,15 @@ var lima = {
 
 };
 
-
-
-
-
-
-
 function random(min, max) {
-
-
  // TODO: "floor" this random number generator
-
-
- return Math.random() * (max - min + 1) + min;
-
-
+ return Math.floor(Math.random() * (max - min + 1) + min);
 }
-
-
-
-
-
-
-
 // TODO: list all shop objects in an array
-
-
-var allShops = [];
-
-
-
-
-
-
-
+var allShops = [seattle, lima, dubai, tokyo, paris];
 (function renderAllShops() {
-
-
  for (var i = 0; i < allShops.length; i++) {
-
-
    allShops[i].render();
-
-
  }
-
-
-
-
-
-   
-  
- },
- calcCookiesEachHour: function () {
-
-   this.calcCustomersEachHour();
-
-   for (var i = 0; i < hours.length; i++) {
-
-     var oneHour = Math.ceil(this.customersEachHour[i] * this.avgCookiesPerSale);
-
-     this.cookiesEachHour.push(oneHour);
-
-     this.totalDailyCookies += oneHour;
-   }
-  }
-}
+})();
 
