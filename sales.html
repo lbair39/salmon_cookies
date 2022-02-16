@@ -1,181 +1,124 @@
 <!DOCTYPE html>
 
-
-
-
 <html>
-
-
-
-
-
-
 <head>
-
-
- <meta charset="utf-8">
-
-
- <link rel="stylesheet" href="css/styles.css">
-
-
- <link href="https://fonts.googleapis.com/css?family=Righteous" rel="stylesheet">
-
-
- <title>Sales Data: Pat's Salmon Cookies</title>
-
-
-</head>
  <meta charset="utf-8">
  <link rel="stylesheet" href="css/styles.css">
  <link href="https://fonts.googleapis.com/css?family=Righteous" rel="stylesheet">
  <title>Sales Data: Pat's Salmon Cookies</title>
 </head>
+
 <body>
- <h1>Pat's Salmon Cookies: Sales Data</h1>
- <!-- NOTE: each city has a ul like yesterday, without store data -->
- <!-- Today, you will be using JS to update each <ul>
-      to contain a set of <li>'s with related store info
-      Do not modify the <ul>'s below directly in HTML, JS should do this -->
 
- <h2>Seattle</h
+ <h1>Pat's Salmon Cookies: Sales Data</h1>
+
+ <!-- NOTE: each city has a ul like yesterday, without store data -->
+
+ <!-- Today, you will be using JS to update each <ul>
+
+ <h2>Seattle</h2>
+ 
+ 
+  <ul id="seattle">
+      <li>6am: 210 cookies</li>
+      <li>7am: 208 cookies</li>
+      <li>8am: 216 cookies</li>
+      <li>9am: 220 cookies</li>
+      <li>10am: 212 cookies</li>
+      <li>11am: 213 cookies</li>
+      <li>12pm: 221 cookies</li>
+      <li>1pm: 222 cookies</li>
+      <li>2pm: 209 cookies</li>
+      <li>3pm: 206 cookies</li>
+      <li>4pm: 207 cookies</li>
+      <li>5pm: 208 cookies</li>
+      <li>6pm: 214 cookies</li>
+      <li>7pm: 224 cookies</li>
+  </ul>
+ 
+ 
+  <h2>Tokyo</h2>
+ 
+ 
+  <ul id="tokyo">
+   <li>6am: 211 cookies</li>
+   <li>7am: 213 cookies</li>
+   <li>8am: 228 cookies</li>
+   <li>9am: 221 cookies</li>
+   <li>10am: 212 cookies</li>
+   <li>11am: 223 cookies</li>
+   <li>12pm: 226 cookies</li>
+   <li>1pm: 248 cookies</li>
+   <li>2pm: 219 cookies</li>
+   <li>3pm: 206 cookies</li>
+   <li>4pm: 210 cookies</li>
+   <li>5pm: 209 cookies</li>
+   <li>6pm: 217 cookies</li>
+   <li>7pm: 229 cookies</li> 
+  </ul>
+ 
+ 
+  <h2>Dubai</h2>
+ 
+ 
+  <ul id="dubai">
+   <li>6am: 213 cookies</li>
+   <li>7am: 211 cookies</li>
+   <li>8am: 229 cookies</li>
+   <li>9am: 213 cookies</li>
+   <li>10am: 214 cookies</li>
+   <li>11am: 225 cookies</li>
+   <li>12pm: 227 cookies</li>
+   <li>1pm: 238 cookies</li>
+   <li>2pm: 217 cookies</li>
+   <li>3pm: 223 cookies</li>
+   <li>4pm: 211 cookies</li>
+   <li>5pm: 206 cookies</li>
+   <li>6pm: 213 cookies</li>
+   <li>7pm: 223 cookies</li> 
+  </ul>
+ 
+ 
+  <h2>Paris</h2>
+ 
+ 
+  <ul id="paris">
+   <li>6am: 213 cookies</li>
+   <li>7am: 221 cookies</li>
+   <li>8am: 219 cookies</li>
+   <li>9am: 213 cookies</li>
+   <li>10am: 234 cookies</li>
+   <li>11am: 222 cookies</li>
+   <li>12pm: 227 cookies</li>
+   <li>1pm: 232 cookies</li>
+   <li>2pm: 217 cookies</li>
+   <li>3pm: 214 cookies</li>
+   <li>4pm: 212 cookies</li>
+   <li>5pm: 207 cookies</li>
+   <li>6pm: 217 cookies</li>
+   <li>7pm: 229 cookies</li> 
+  </ul>
+ 
+ 
+  <h2>Lima</h2>
+  <ul id="lima">
+   <li>6am: 211 cookies</li>
+   <li>7am: 212 cookies</li>
+   <li>8am: 227 cookies</li>
+   <li>9am: 243 cookies</li>
+   <li>10am: 214 cookies</li>
+   <li>11am: 238 cookies</li>
+   <li>12pm: 227 cookies</li>
+   <li>1pm: 228 cookies</li>
+   <li>2pm: 217 cookies</li>
+   <li>3pm: 227 cookies</li>
+   <li>4pm: 231 cookies</li>
+   <li>5pm: 208 cookies</li>
+   <li>6pm: 214 cookies</li>
+   <li>7pm: 213 cookies</li> 
+  </ul>
+
 </body>
+<script src="js/app.js"></script>
 </html>
 
-
-
-
-
-
-
- <body>
-
-
-   <h1>Pat's Salmon Cookies: Sales Data</h1>
-
-
-
-
-
-
-
-   <!-- TODO: add sample store data for following cities -->
-
-
-
-
-
-
-
-   <!-- NOTE: store data should be contained in an unordered list
-
-
-   <!-- each list item should contain the following:  time of day (from 6am - 7pm) and total number of cookies sold -->
-
-
-   <!-- ie: 6am: 215 cookies, 7am: 208 cookies, etc etc -->
-
-
-   <h2>Seattle</h2>
-
-
-   <ul id="seattle">
-       <li>6am: 210 cookies</li>
-       <li>7am: 208 cookies</li>
-       <li>8am: 216 cookies</li>
-       <li>9am: 220 cookies</li>
-       <li>10am: 212 cookies</li>
-       <li>11am: 213 cookies</li>
-       <li>12pm: 221 cookies</li>
-       <li>1pm: 222 cookies</li>
-       <li>2pm: 209 cookies</li>
-       <li>3pm: 206 cookies</li>
-       <li>4pm: 207 cookies</li>
-       <li>5pm: 208 cookies</li>
-       <li>6pm: 214 cookies</li>
-       <li>7pm: 224 cookies</li>
-   </ul>
-
-
-   <h2>Tokyo</h2>
-
-
-   <ul id="tokyo">
-    <li>6am: 211 cookies</li>
-    <li>7am: 213 cookies</li>
-    <li>8am: 228 cookies</li>
-    <li>9am: 221 cookies</li>
-    <li>10am: 212 cookies</li>
-    <li>11am: 223 cookies</li>
-    <li>12pm: 226 cookies</li>
-    <li>1pm: 248 cookies</li>
-    <li>2pm: 219 cookies</li>
-    <li>3pm: 206 cookies</li>
-    <li>4pm: 210 cookies</li>
-    <li>5pm: 209 cookies</li>
-    <li>6pm: 217 cookies</li>
-    <li>7pm: 229 cookies</li>  
-   </ul>
-
-
-   <h2>Dubai</h2>
-
-
-   <ul id="dubai">
-    <li>6am: 213 cookies</li>
-    <li>7am: 211 cookies</li>
-    <li>8am: 229 cookies</li>
-    <li>9am: 213 cookies</li>
-    <li>10am: 214 cookies</li>
-    <li>11am: 225 cookies</li>
-    <li>12pm: 227 cookies</li>
-    <li>1pm: 238 cookies</li>
-    <li>2pm: 217 cookies</li>
-    <li>3pm: 223 cookies</li>
-    <li>4pm: 211 cookies</li>
-    <li>5pm: 206 cookies</li>
-    <li>6pm: 213 cookies</li>
-    <li>7pm: 223 cookies</li>  
-   </ul>
-
-
-   <h2>Paris</h2>
-
-
-   <ul id="paris">
-    <li>6am: 213 cookies</li>
-    <li>7am: 221 cookies</li>
-    <li>8am: 219 cookies</li>
-    <li>9am: 213 cookies</li>
-    <li>10am: 234 cookies</li>
-    <li>11am: 222 cookies</li>
-    <li>12pm: 227 cookies</li>
-    <li>1pm: 232 cookies</li>
-    <li>2pm: 217 cookies</li>
-    <li>3pm: 214 cookies</li>
-    <li>4pm: 212 cookies</li>
-    <li>5pm: 207 cookies</li>
-    <li>6pm: 217 cookies</li>
-    <li>7pm: 229 cookies</li>  
-   </ul>
-
-
-   <h2>Lima</h2>
-   <ul id="lima">
-    <li>6am: 211 cookies</li>
-    <li>7am: 212 cookies</li>
-    <li>8am: 227 cookies</li>
-    <li>9am: 243 cookies</li>
-    <li>10am: 214 cookies</li>
-    <li>11am: 238 cookies</li>
-    <li>12pm: 227 cookies</li>
-    <li>1pm: 228 cookies</li>
-    <li>2pm: 217 cookies</li>
-    <li>3pm: 227 cookies</li>
-    <li>4pm: 231 cookies</li>
-    <li>5pm: 208 cookies</li>
-    <li>6pm: 214 cookies</li>
-    <li>7pm: 213 cookies</li>  
-   </ul>
-
-<html>
