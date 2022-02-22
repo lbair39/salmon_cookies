@@ -1,3 +1,5 @@
+'use strict'
+
 const hours = ['6am', '7am', '8am', '9am', '10am', '11am', '12pm', '1pm', '2pm', '3pm', '4pm', '5pm', '6pm', '7pm'];
 const tableElement = document.getElementById('sales-table');
 
@@ -17,6 +19,7 @@ function CookieStand(locationName, minCustomersPerHour, maxCustomersPerHour, avg
 }
 // TODO: create a comment describing the method below
 // - what does prototype mean?
+// it is calculating customers per hour
 
 CookieStand.prototype.calcCustomersEachHour = function() {
  for (let i = 0; i < hours.length; i++) {
@@ -52,6 +55,9 @@ CookieStand.all = [];
 new CookieStand('Seattle', 23, 65, 6.3);
 
 new CookieStand('Tokyo', 3, 24, 1.2);
+new CookieStand('Dubai', 7, 42, 3.4);
+new CookieStand('Paris', 9, 51, 4.3);
+new CookieStand('Lima', 6, 37, 2.5);
 
 function random(min, max) {
  return Math.floor(Math.random() * (max - min + 1)) + min;
@@ -105,17 +111,17 @@ function makeFooterRow() {
  makeFooterRow();
 })();
 
-const ocean = document.getElementById('ocean'),
- waveWidth = 10,
- waveCount = Math.floor(window.innerWidth/waveWidth),
- docFrag = document.createDocumentFragment();
-for(let i = 0; i < waveCount; i++){
- const wave = document.createElement('div');
- wave.className += ' wave';
- docFrag.appendChild(wave);
- wave.style.left = i * waveWidth + 'px';
- wave.style.webkitAnimationDelay = (i/100) + 's';
-}
-// TODO: put docFrag as the argument to appendChild below
-ocean.appendChild(docFrag);
-   <script src="js/app.js"></script>
+// const ocean = document.getElementById('ocean'),
+//  waveWidth = 10,
+//  waveCount = Math.floor(window.innerWidth/waveWidth),
+//  docFrag = document.createDocumentFragment();
+// for(let i = 0; i < waveCount; i++){
+//  const wave = document.createElement('div');
+//  wave.className += ' wave';
+//  docFrag.appendChild(wave);
+//  wave.style.left = i * waveWidth + 'px';
+//  wave.style.webkitAnimationDelay = (i/100) + 's';
+// }
+// // TODO: put docFrag as the argument to appendChild below
+// ocean.appendChild(docFrag);
+//    <script src="js/app.js"></script>
