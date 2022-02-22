@@ -52,6 +52,12 @@ CookieStand.all = [];
 new CookieStand('Seattle', 23, 65, 6.3);
  
 new CookieStand('Tokyo', 3, 24, 1.2);
+
+new CookieStand('Dubai', 16, 42, 5.3);
+
+new CookieStand('Paris', 7, 24, 2.3);
+
+new CookieStand('Lima', 13, 53, 4.7);
  
 function random(min, max) {
 return Math.floor(Math.random() * (max - min + 1)) + min;
@@ -62,6 +68,7 @@ const tableRow = document.createElement('tr');
 let tableHeaderElement = document.createElement('th');
 tableHeaderElement.textContent = 'Locations';
 tableRow.appendChild(tableHeaderElement);
+
 for (let i = 0; i < hours.length; i++) {
   tableHeaderElement = document.createElement('th');
   tableHeaderElement.textContent = hours[i];
@@ -75,15 +82,19 @@ tableElement.appendChild(tableRow);
 // TODO: create a series of comments in this function where you are confused with what's happening
 // - what about the code is confusing?
 // - can you guess what it does?
+
 function makeFooterRow() {
-const tableRow = document.createElement('tr');
+
+  const tableRow = document.createElement('tr');
 let tableHeaderElement = document.createElement('th');
 tableHeaderElement.textContent = 'Hourly Totals for All Locations';
 tableRow.appendChild(tableHeaderElement);
 let totalOfTotals = 0;
+
 for (let i = 0; i < hours.length; i++) {
   let hourlyTotal = 0;
-  for (const j = 0; j < CookieStand.all.length; j++){
+  
+  for (let j = 0; j < CookieStand.all.length; j++){
     hourlyTotal += CookieStand.all[j].cookiesEachHour[i];
     totalOfTotals += CookieStand.all[j].cookiesEachHour[i];
   }
@@ -105,17 +116,17 @@ for(let i = 0; i < CookieStand.all.length; i++){
 makeFooterRow();
 })();
  
-const ocean = document.getElementById('ocean'),
-waveWidth = 10,
-waveCount = Math.floor(window.innerWidth/waveWidth),
-docFrag = document.createDocumentFragment();
-for(let i = 0; i < waveCount; i++){
-const wave = document.createElement('div');
-wave.className += ' wave';
-docFrag.appendChild(wave);
-wave.style.left = i * waveWidth + 'px';
-wave.style.webkitAnimationDelay = (i/100) + 's';
-}
-// TODO: put docFrag as the argument to appendChild below
-ocean.appendChild(docFrag);
-  <script src="js/app.js"></script>
+// const ocean = document.getElementById('ocean'),
+// waveWidth = 10,
+// waveCount = Math.floor(window.innerWidth/waveWidth),
+// docFrag = document.createDocumentFragment();
+// for(let i = 0; i < waveCount; i++){
+// const wave = document.createElement('div');
+// wave.className += ' wave';
+// docFrag.appendChild(wave);
+// wave.style.left = i * waveWidth + 'px';
+// wave.style.webkitAnimationDelay = (i/100) + 's';
+// }
+// // TODO: put docFrag as the argument to appendChild below
+// ocean.appendChild(docFrag);
+//   <script src="js/app.js"></script>
