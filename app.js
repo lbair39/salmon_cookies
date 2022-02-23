@@ -9,8 +9,8 @@ var hours =['6am', '7am', '8am', '9am', '10am', '11am', '12am', '1pm', '2pm', '3
 
 var seattle = {
  locationName: 'Seattle',
- minCustomersPerHour: 23,
- maxCustomersPerHour: 65,
+ minCustomersPerHour: 12,
+ maxCustomersPerHour: 60,
  avgCookiesPerSale: 6.3,
  customersEachHour: [],
  cookiesEachHour: [],
