@@ -3,6 +3,7 @@ const tableElement = document.getElementById('sales-table');
  
 // TODO:  create a comment below describing how this Constructor function works
 // - what makes it a constructor function?
+// constructor function allows you to call stuff with this easier than object array thing i guess
 // - what do you think the CookieStand.all.push(all) method is doing?
  
 function CookieStand(locationName, minCustomersPerHour, maxCustomersPerHour, avgCookiesPerSale) {
@@ -10,6 +11,7 @@ this.locationName = locationName;
 this.minCustomersPerHour = minCustomersPerHour;
 this.maxCustomersPerHour = maxCustomersPerHour;
 this.avgCookiesPerSale = avgCookiesPerSale;
+
 this.customersEachHour = [];
 this.cookiesEachHour = [];
 this.totalDailyCookies = 0;
@@ -17,6 +19,7 @@ CookieStand.all.push(this);
 }
 // TODO: create a comment describing the method below
 // - what does prototype mean?
+// Prototypes add soemthing to your fuction that you can call specifically that isn't in your original function 
  
 CookieStand.prototype.calcCustomersEachHour = function() {
 for (let i = 0; i < hours.length; i++) {
@@ -49,6 +52,7 @@ tableElement.appendChild(tableRow);
 };
 CookieStand.all = [];
 // TODO: instantiate a new CookieStand object (with sample data) for Dubai, Paris, and Lima
+
 new CookieStand('Seattle', 23, 65, 6.3);
  
 new CookieStand('Tokyo', 3, 24, 1.2);
@@ -81,7 +85,9 @@ tableElement.appendChild(tableRow);
 }
 // TODO: create a series of comments in this function where you are confused with what's happening
 // - what about the code is confusing?
+// The two loops is kind of confusing.
 // - can you guess what it does?
+// I think one loops through everything and the other loops through all of the totals to count them all
 
 function makeFooterRow() {
 
