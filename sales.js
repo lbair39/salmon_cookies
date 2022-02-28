@@ -111,17 +111,16 @@ function makeFooterRow() {
  makeFooterRow();
 })();
 
-// const ocean = document.getElementById('ocean'),
-  // waveWidth = 10,
-  // waveCount = Math.floor(window.innerWidth/waveWidth),
-  // docFrag = document.createDocumentFragment();
-//  for(let i = 0; i < waveCount; i++){
-  // const wave = document.createElement('div');
-  // wave.className += ' wave';
-  // docFrag.appendChild(wave);
-  // wave.style.left = i * waveWidth + 'px';
-  // wave.style.webkitAnimationDelay = (i/100) + 's';
-//  }
+ const ocean = document.getElementById('ocean'),
+ waveWidth = 10,
+ waveCount = Math.floor(window.innerWidth/waveWidth),
+ docFrag = document.createDocumentFragment();
+  for(let i = 0; i < waveCount; i++){
+     const wave = document.createElement('div');
+   wave.className += ' wave';
+   docFrag.appendChild(wave);
+   wave.style.left = i * waveWidth + 'px';
+   wave.style.webkitAnimationDelay = (i/100) + 's';
+  }
  // TODO: put docFrag as the argument to appendChild below
-//  ocean.appendChild(docFrag);
-    // <script src="js/app.js"></script>
+  ocean.appendChild(docFrag);

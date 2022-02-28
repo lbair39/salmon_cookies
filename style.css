@@ -1,9 +1,12 @@
 * {
     font-family: 'Helvetica', sans-serif;
-    /*outline: 1px dotted green;*/
+    
    }
    body {
       background-color: black;
+   }
+   li{
+     color:#777;
    }
 
    h1, h2 {
