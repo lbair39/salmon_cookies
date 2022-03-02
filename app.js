@@ -9,8 +9,8 @@ var hours =['6am', '7am', '8am', '9am', '10am', '11am', '12am', '1pm', '2pm', '3
 
 var seattle = {
  locationName: 'Seattle',
- minCustomersPerHour: 23,
- maxCustomersPerHour: 65,
+ minCustomersPerHour: 12,
+ maxCustomersPerHour: 60,
  avgCookiesPerSale: 6.3,
  customersEachHour: [],
  cookiesEachHour: [],
@@ -51,17 +51,13 @@ var seattle = {
 };
 
 // TODO:  copy the object data from above and paste it 4 times below, each time representing a new city:  tokyo, dubai, paris, lima
-
-
 // the minCustomersPerHour, maxCustomersPerHour, avgCookiesPerSale should all have different sales counts
-
-
 // you may make these counts up and will also need to update where you "select" or "access" your HTML for each store
 
 var tokyo = {
   locationName: 'Tokyo',
-  minCustomersPerHour: 200,
-  maxCustomersPerHour: 300,
+  minCustomersPerHour: 22,
+  maxCustomersPerHour: 120,
   avgCookiesPerSale: 7.6,
   customersEachHour: [],
   cookiesEachHour: [],
@@ -106,22 +102,18 @@ var tokyo = {
 
 var dubai = {
   locationName: 'Dubai',
-  minCustomersPerHour: 200,
-  maxCustomersPerHour: 300,
+  minCustomersPerHour: 27,
+  maxCustomersPerHour: 96,
   avgCookiesPerSale: 8.2,
   customersEachHour: [],
   cookiesEachHour: [],
   totalDailyCookies: 0,
 
   calcCustomersEachHour: function () {
- 
     for (var i = 0; i < hours.length; i++) {
- 
       this.customersEachHour.push(random(this.minCustomersPerHour, this.maxCustomersPerHour));
-
     }
   },
- 
   calcCookiesEachHour: function () {
     this.calcCustomersEachHour();
     for (var i = 0; i < hours.length; i++) {
@@ -130,18 +122,14 @@ var dubai = {
       this.totalDailyCookies += oneHour;
     }
   },
- 
   render() {
     this.calcCookiesEachHour();
-
     var unorderedList=document.getElementById("dubai");
- 
     for (var i = 0; i < hours.length; i++) {
       var listItem = document.createElement('li');
       listItem.textContent = hours[i] + ': ' + this.cookiesEachHour[i] + ' cookies';
       unorderedList.appendChild(listItem);
     }
-
     listItem = document.createElement('li');
     listItem.textContent = 'Total: ' + this.totalDailyCookies + ' cookies';
     unorderedList.appendChild(listItem);
@@ -149,21 +137,11 @@ var dubai = {
  
  };
 
-  for (var i = 0; i < hours.length; i++) {
-    var listItem = document.createElement('li');
-    listItem.textContent = hours[i] + ': ' + this.cookiesEachHour[i] + ' cookies';
-    unorderedList.appendChild(listItem);
-  }
-  listItem = document.createElement('li');
-  listItem.textContent = 'Total: ' + this.totalDailyCookies + ' cookies';
-  unorderedList.appendChild(listItem);
-}
-};
 
 var paris = { 
     locationName: 'Paris', 
-    minCustomersPerHour: 23, 
-    maxCustomersPerHour: 65,
+    minCustomersPerHour: 35, 
+    maxCustomersPerHour: 140,
     avgCookiesPerSale: 6.3,
     customersEachHour: [],
     cookiesEachHour: [],
@@ -176,20 +154,12 @@ var paris = {
 },
 
 calcCookiesEachHour: function () {
-
     this.calcCustomersEachHour();
-    
+ 
     for (var i = 0; i < hours.length; i++) {
-
     var oneHour = Math.ceil(this.customersEachHour[i] *  this.avgCookiesPerSale);
-
-
      this.cookiesEachHour.push(oneHour);
-
-
      this.totalDailyCookies += oneHour;
-
-
    }
 },
 
@@ -210,8 +180,8 @@ for (var i = 0; i < hours.length; i++) {
 
 var lima = { 
     locationName: 'Lima',
-    minCustomersPerHour: 23, 
-    maxCustomersPerHour: 65, 
+    minCustomersPerHour: 37, 
+    maxCustomersPerHour: 84, 
     avgCookiesPerSale: 6.3, 
     customersEachHour: [],
     cookiesEachHour: [], 
@@ -257,4 +227,23 @@ var allShops = [seattle, lima, dubai, tokyo, paris];
    allShops[i].render();
  }
 })();
+
+const ocean = document.getElementById('ocean'),
+ waveWidth = 10,
+ waveCount = Math.floor(window.innerWidth/waveWidth),
+ docFrag = document.createDocumentFragment();
+
+
+
+for(let i = 0; i < waveCount; i++){
+ const wave = document.createElement('div');
+ wave.className += ' wave';
+ docFrag.appendChild(wave);
+ wave.style.left = i * waveWidth + 'px';
+ wave.style.webkitAnimationDelay = (i/100) + 's';
+}
+
+
+
+ocean.appendChild(docFrag);
 
