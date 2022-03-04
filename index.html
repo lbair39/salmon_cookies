@@ -8,17 +8,40 @@
    <title>Pat's Salmon Cookies</title>
    <link rel="stylesheet" href="home.css">
    <link href="https://fonts.googleapis.com/css?family=Righteous" rel="stylesheet">
- </head>
+   <link href="https://fonts.googleapis.com/css2?family=Bebas+Neue&display=swap" rel="stylesheet">
+
+  </head>
  <body>
    <h1>Welcome to Pat's Salmon Cookies!</h1>
-   <img class="carouselImg" id="salmonImg" src="assets/salmon.png" alt="salmon cookie">
-   <img class="carouselImg" src="assets/chinook.jpg" alt="chinook">
-   <img class="carouselImg" src="assets/cutter.jpeg" alt="Salmon Cookie Cutter">
-   <img class="carouselImg" src="assets/family.jpg" alt="Family enjoying cookies">
-   <img class="carouselImg" src="assets/fish.jpg" alt="Examples of fish">
-   <img class="carouselImg" src="assets/frosted-cookie.jpg" alt="Frosted salmon cookies">
-   <img class="carouselImg" src="assets/shirt.jpg" alt="Salmon shirt ">
-     <ul>
+   
+   <div class="container">
+     <div class="slider">
+       <div class="slider_slides">
+         <div class="slider_slide_active">
+           <img src="assets/chinook.jpg" alt="chinook">
+         </div>
+         <div class="slider_slide">
+           <img src="assets/family.jpg" alt="family">
+         </div>
+         <div class="slider_slide">
+           <img src="assets/frosted-cookie.jpg" alt="frosted cookie">
+         </div>
+         <div class="slider_slide">
+           <img src="assets/shirt.jpg" alt="shirt">
+         </div>
+        <div id="nav-buttn--prev" class="slider_nav-button"></div>
+        <div id="nav-button--next" class="slider_nav-button"></div>
+        <div class="slider_nav">
+          <div class="slider__navlink active"></div>
+          <div class="slider__navlink"></div>
+          <div class="slider__navlink"></div>
+          <div class="slider__navlink"></div>
+        </div>
+        </div>
+      </div>
+   </div>
+
+   <ul>
        <h2>Seattle</h2>
        <li>Hours Open : 6am - 7pm</li>
        <li>Contact Info : 123-456-7890</li>
