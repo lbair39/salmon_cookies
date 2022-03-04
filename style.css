@@ -12,7 +12,7 @@
  
  body {
      
-     background-color: #e2dbe2;
+     background-color: rgb(232, 235, 240);
  }
 
  td {
@@ -155,7 +155,7 @@
   color-stop(0, rgb(0,50,150)),
  
  
-  color-stop(0.50, rgb(0,150,255))
+  color-stop(0.50, rgb(93, 187, 253))
  
  
   );
@@ -169,7 +169,7 @@
  .wave{
  
  
-  background:#a8e3ff;
+  background: rgb(156, 214, 255);
  
  
   display:inline-block;
