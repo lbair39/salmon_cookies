@@ -1,9 +1,10 @@
 * {
-  color: rgb(96, 99, 102);
+  color: rgb(53, 50, 50);
   font-family: 'Helvetica', sans-serif;
+  
  }
  li {
-  color: #777;
+  color: rgb(37, 36, 36);
  }
 
  h1, h2 {
@@ -19,8 +20,8 @@
   background-color: salmon;  
   padding: 5px;
      border-radius: 8px;
-  border: 1px solid black;
-  font-size: .8em;
+  border: 2px solid rgb(0, 0, 0);
+  font-size: .9em;
  } 
  
  
@@ -29,9 +30,10 @@
  th {
      background-color: gray;
     color: white;
+    border: 2px solid rgb(0, 0, 0);
   padding: 2px;
   border-radius: 8px;
-  font-size: .8em;
+  font-size: .9em;
  }
  
  #thefish {
@@ -152,7 +154,7 @@
   left top,
  
  
-  color-stop(0, rgb(0,50,150)),
+  color-stop(0, rgb(0, 37, 109)),
  
  
   color-stop(0.50, rgb(93, 187, 253))
