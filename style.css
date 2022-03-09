@@ -1,43 +1,54 @@
-*{color: rgb(96, 99, 102);
-font-family: 'Helvetica', sans-serif;
-}
-li {
-color: #777;
-}
 
-h1, h2 {
-font-family: 'Righteous', cursive;
-}
-body {
+* {
+  color: rgb(53, 50, 50);
+  font-family: 'Helvetica', sans-serif;
   
-   background-color: #e2dbe2;
-}
+ }
+ li {
+  color: rgb(37, 36, 36);
+ }
 
-td {
-background-color: salmon; 
-padding: 5px;
-   border-radius: 8px;
-border: 1px solid black;
-font-size: .8em;
-}
-th {
-   background-color: gray;
-  color: white;
-padding: 2px;
-border-radius: 8px;
-font-size: .8em;
-}
-#thefish {
-z-index: 3;
-margin-top: 10%;
-margin-left: 0%;
-height: 50px;
-position:absolute;
-animation-name:             movefish;
-animation-duration:         21s;
-animation-iteration-count:  infinite;
-transition-timing-function: ease-in-out;
-}
+ h1, h2 {
+  font-family: 'Righteous', cursive;
+ }
+ 
+ body {
+     
+     background-color: rgb(232, 235, 240);
+ }
+
+ td {
+  background-color: salmon;  
+  padding: 5px;
+     border-radius: 8px;
+  border: 2px solid rgb(0, 0, 0);
+  font-size: .9em;
+ } 
+ 
+ 
+ 
+ 
+ th {
+     background-color: gray;
+    color: white;
+    border: 2px solid rgb(0, 0, 0);
+  padding: 2px;
+  border-radius: 8px;
+  font-size: .9em;
+ }
+ 
+ #thefish {
+  z-index: 3;
+  margin-top: 10%;
+  margin-left: 0%;
+  height: 50px;
+  position:absolute;
+  animation-name:             movefish;
+  animation-duration:         21s;
+  animation-iteration-count:  infinite;
+  transition-timing-function: ease-in-out;
+ }
+
 
 #thefish2 {
 z-index: 3;
@@ -106,6 +117,107 @@ animation-duration:         11s;
 animation-iteration-count:  infinite;
 transition-timing-function: ease-in-out;
 }
+
+ .carouselImg {
+ 
+ 
+  margin: auto;
+ 
+ 
+  max-width: 40%;
+  max-height: 400px;
+ }
+ ul ul li {
+ 
+ 
+  color: salmon;
+ 
+ 
+ }
+ #carousel {
+ 
+ 
+  height: 400px;
+ 
+ 
+ }
+ 
+ /*https://codepen.io/loktar00/pen/kfrKC*/
+ 
+ 
+ #ocean{
+ 
+ 
+  position:absolute;
+ 
+ 
+  width:100%;
+ 
+ 
+  min-height:90%;
+ 
+ 
+  background-image: -webkit-gradient(
+ 
+ 
+  linear,
+ 
+ 
+  left bottom,
+ 
+ 
+  left top,
+ 
+ 
+  color-stop(0, rgb(0, 37, 109)),
+ 
+ 
+  color-stop(0.50, rgb(93, 187, 253))
+ 
+ 
+  );
+ 
+ 
+  z-index: 0;
+ 
+ 
+ }
+
+ .wave{
+ 
+ 
+  background: rgb(156, 214, 255);
+ 
+ 
+  display:inline-block;
+ 
+ 
+  z-index: 1;
+ 
+ 
+  height:20%;
+ 
+ 
+  width:18px;
+ 
+ 
+  position:absolute;
+ 
+ 
+  animation-name:             dostuff;
+ 
+ 
+  animation-duration:         11s;
+ 
+ 
+  animation-iteration-count:  infinite;
+ 
+ 
+  transition-timing-function: ease-in-out;
+ 
+ 
+ }
+
 
 @keyframes dostuff{
 0%{
